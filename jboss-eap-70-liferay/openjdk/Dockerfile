@@ -1,5 +1,5 @@
 # 
-# Liferay DXP for Openshift
+# Liferay DXP + JBoss EAP 7.0 for Openshift over OpenJDK
 # 
 # docker build \
 # --build-arg LIFERAY_PACKAGE_URL="http://<<YOUR_PACKAGE_REPOSITORY>>/liferay-dxp-digital-enterprise-7.0-sp6-20171010144253003.war" \

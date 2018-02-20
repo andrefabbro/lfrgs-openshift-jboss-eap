@@ -2,7 +2,7 @@
 # JBoss EAP 7.0 for Openshift with Oracle JDK
 # 
 # Usage: 
-# docker build -t liferay/jboss-eap70-base:latest .
+# docker build -t liferay/jboss-eap-base:70 .
 #
 FROM registry.access.redhat.com/jboss-eap-7/eap70-openshift
 MAINTAINER Andre Fabbro <andre.fabbro@liferay.com>
