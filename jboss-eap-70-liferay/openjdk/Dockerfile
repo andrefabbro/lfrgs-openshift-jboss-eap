@@ -10,7 +10,7 @@
 # --build-arg LIFERAY_TOOLS_URL="http://<<YOUR_PACKAGE_REPOSITORY>>/liferay-dxp-digital-enterprise-tools-7.0-sp6-20171010144253003.zip" \
 # --build-arg LIFERAY_WORK_URL="http://<<YOUR_PACKAGE_REPOSITORY>>/liferay-dxp-digital-enterprise-work-7.0-sp6-20171010144253003.zip" \
 # --build-arg LIFERAY_FIX_PACK="http://<<YOUR_PACKAGE_REPOSITORY>>/liferay-fix-pack-de-39-7010.zip" \
-# -t liferay/dxp-jboss70:openjdk . 
+# -t liferay/dxp-jboss-eap70:openjdk . 
 #
 FROM registry.access.redhat.com/jboss-eap-7/eap70-openshift
 MAINTAINER Andre Fabbro <andre.fabbro@liferay.com>
