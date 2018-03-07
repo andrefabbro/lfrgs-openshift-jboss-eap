@@ -12,7 +12,7 @@
 # --build-arg LIFERAY_FIX_PACK="http://<<YOUR_PACKAGE_REPOSITORY>>/liferay-fix-pack-de-39-7010.zip" \
 # -t liferay/dxp-jboss-eap71:openjdk . 
 #
-FROM registry.access.redhat.com/jboss-eap-7/eap71-openshift
+FROM openshift/jboss-eap71-openshift:1.1
 MAINTAINER Andre Fabbro <andre.fabbro@liferay.com>
 
 ARG LIFERAY_PACKAGE_URL
