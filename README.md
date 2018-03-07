@@ -31,23 +31,6 @@ docker build \
  -t liferay/dxp-jboss71:oraclejdk . 
 ```
 
-##### Build the JBoss Base
-
-If you're planning to use Oracle JDK, first you have to build the JBoss base image, there are one for JBoss EAP 7.0 and other for 7.1:
-
-###### JBoss EAP 7.0 Base
-
-```
-cd jboss-base/jboss-base-eap-70
-docker build -t liferay/jboss-eap-base:70 .
-```
-
-###### Jboss EAP 7.1 Base
-
-```
-cd jboss-base/jboss-base-eap-71
-docker build -t liferay/jboss-eap-base:71 .
-```
 
 ##### Build the Liferay + JBoss package
 
