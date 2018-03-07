@@ -12,7 +12,7 @@
 # --build-arg LIFERAY_FIX_PACK="http://<<YOUR_PACKAGE_REPOSITORY>>/liferay-fix-pack-de-39-7010.zip" \
 # -t liferay/dxp-jboss-eap71:oraclejdk . 
 #
-FROM liferay/jboss-eap-base:71
+FROM openshift/jboss-eap71-openshift:1.1
 MAINTAINER Andre Fabbro <andre.fabbro@liferay.com>
 
 ARG LIFERAY_PACKAGE_URL
@@ -31,6 +31,16 @@ ENV JAVA_HOME="/usr/java/jdk1.8.0_161" \
 WORKDIR /tmp
 
 USER root
+
+RUN yum update -y && \
+	yum install -y wget augeas telnet && \
+	wget --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u161-b12/2f38c3b165be4555a1fa6e98c45e0808/jdk-8u161-linux-x64.rpm && \
+	yum localinstall -y jdk-8u161-linux-x64.rpm && \
+	rm -f jdk-8u161-linux-x64.rpm && \
+	rm -rf /var/cache/yum
+	
+RUN alternatives --set java /usr/java/jdk1.8.0_161/jre/bin/java && \
+	alternatives --set javac /usr/java/jdk1.8.0_161/bin/javac
 
 RUN rm -rf /tmp/* \
 	&& chown jboss:root /opt \
